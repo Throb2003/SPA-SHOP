@@ -1,7 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
     const bookingForm = document.getElementById("bookingForm");
     const bookingTableBody = document.querySelector("#bookingTable tbody");
+    const navigationLinks = document.querySelectorAll(".navigation a");
 
+    // Function to handle navigation link clicks
+    function handleNavigationClick(event) {
+        event.preventDefault();
+        const targetId = event.target.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Attach event listeners to navigation links
+    navigationLinks.forEach(link => {
+        link.addEventListener("click", handleNavigationClick);
+    });
+
+    // Function to handle form submission
     bookingForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
