@@ -13,7 +13,7 @@ body {
   h1{text-align: center;
      font-family: 'Times New Roman';
 }
-nav ul li{
+.navigation ul li{
     dispay: inline;
     text-align: center;
     margin-right: 20px;
